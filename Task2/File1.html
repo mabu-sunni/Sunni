@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Delivery Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Grocery Delivery Service</h1>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart</a>
+            <a href="#checkout">Checkout</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Products Section -->
+        <section id="products">
+            <h2>Available Products</h2>
+            <div class="product-list">
+                <div class="product" data-name="Apples" data-price="2.50">
+                    <h3>Apples</h3>
+                    <p>$2.50 per lb</p>
+                    <button onclick="addToCart('Apples', 2.50)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Bananas" data-price="1.20">
+                    <h3>Bananas</h3>
+                    <p>$1.20 per lb</p>
+                    <button onclick="addToCart('Bananas', 1.20)">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Carrots" data-price="1.00">
+                    <h3>Carrots</h3>
+                    <p>$1.00 per lb</p>
+                    <button onclick="addToCart('Carrots', 1.00)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <p id="cart-total">Total: $0.00</p>
+        </section>
+
+        <!-- Checkout Section -->
+        <section id="checkout">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required><br>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required><br>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Grocery Delivery Service. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
